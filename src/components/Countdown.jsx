@@ -5,7 +5,7 @@ import '../styles/Countdown.css'
 const Countdown = ({ onNext, onCountdownExpired }) => {
   // Set your birthday date here (YYYY-MM-DD HH:MM:SS)
   // Using useMemo to prevent recreation of Date object on every render
-  const birthdayDate = React.useMemo(() => new Date('2025-08-1 00:00:00'), [])
+  const birthdayDate = React.useMemo(() => new Date('2025-08-12 00:00:00'), [])
   const [showRestriction, setShowRestriction] = React.useState(false)
   const [showYay, setShowYay] = React.useState(false)
   const [showNay, setShowNay] = React.useState(false)
