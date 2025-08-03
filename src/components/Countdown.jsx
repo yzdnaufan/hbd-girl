@@ -5,8 +5,18 @@ import '../styles/Countdown.css'
 const Countdown = ({ onNext, onCountdownExpired }) => {
   // Set your birthday date here (YYYY-MM-DD HH:MM:SS)
   // Using useMemo to prevent recreation of Date object on every render
-  const birthdayDate = React.useMemo(() => new Date('2024-12-25 00:00:00'), [])
+  const birthdayDate = React.useMemo(() => new Date('2025-08-1 00:00:00'), [])
+  const [showRestriction, setShowRestriction] = React.useState(false)
   const { timeLeft, message, isExpired } = useCountdown(birthdayDate)
+
+
+  const handleRestriction = () => {
+    setShowRestriction(true)
+    setTimeout(() => {
+      setShowRestriction(false)
+    }, 3000) // Hide restriction message after 3 seconds
+    
+  }
 
   // Notify parent when countdown expires
   useEffect(() => {
@@ -40,10 +50,22 @@ const Countdown = ({ onNext, onCountdownExpired }) => {
         </div>
 
         <p className="birthday-message">{message}</p>
+
+        {showRestriction && (
+          <p className="restriction-text">
+            Eak dah dibuka duluan ni pasti, dasar ga sabaran.  Sabar sist, please wait for your special day! 🎉
+          </p>
+        )}
         
-        <button className="btn" onClick={onNext}>
+        <button className="btn" onClick={isExpired? onNext : handleRestriction} >
           {isExpired ? 'Celebrate Now! 🎊' : 'Continue 🎈'}
         </button>
+
+        {isExpired && (
+          <p className="restriction-text">
+            Enjoy the song ya! 🎉
+          </p>
+        )}
       </div>
     </div>
   )

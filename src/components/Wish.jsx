@@ -10,8 +10,10 @@ const Wish = ({ onRestart }) => {
         <h2 className="wish-title">Happy Birthday!</h2>
         
         <p className="wish-message">
-          May your special day be filled with happiness, laughter, and all the things that bring you joy! 
-          Here's to another year of wonderful adventures, precious memories, and dreams coming true. 
+          HBD ya al! 🎂 May your day be filled with joy, laughter, and all the things you love.
+          Semoga diumur yang ke-23 ini kamu semakin sukses, bahagia, dan dikelilingi oleh orang-orang yang mencintaimu.
+          You are an amazing person, and you deserve all the best that life has to offer.
+          Dan aku sangat bersyukur bisa kenal kamu. I will always love you and support you in everything you do.
           You deserve all the best that life has to offer. Have an absolutely amazing birthday! 🎂✨
         </p>
 

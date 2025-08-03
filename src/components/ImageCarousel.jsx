@@ -34,8 +34,20 @@ const ImageCarousel = ({ onNext }) => {
     {
       id: 5,
       content: '💝 Precious Memories',
-      background: 'linear-gradient(45deg, #ff6b6b, #ee5a24)',
+      background: 'linear-gradient(45deg, #97ff6bff, #0ce8daff)',
       src: '/images/photo5.jpeg', alt: 'Birthday memory 5'
+    },
+    {
+      id: 6,
+      content: '💝 Cute Picture',
+      background: 'linear-gradient(45deg, #41e81bff, #7a280aff)',
+      src: '/images/photo6.jpeg', alt: 'Birthday memory 6'
+    },
+    {
+      id: 7,
+      content: '💝 Cute Picture',
+      background: 'linear-gradient(45deg, #f74201ff, #6d0e5cff)',
+      src: '/images/photo7.jpeg', alt: 'Birthday memory 7'
     }
   ]
 
