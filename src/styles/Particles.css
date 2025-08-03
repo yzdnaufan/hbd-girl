@@ -1,0 +1,68 @@
+.particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+  /* Optimize rendering */
+  will-change: auto;
+}
+
+.particle {
+  position: absolute;
+  animation: float 4s infinite linear; /* Reduced from 6s to 4s */
+  /* Hardware acceleration */
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+}
+
+.particle-color {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.particle-emoji {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: floatAndSpin 4s infinite linear; /* Reduced from 6s to 4s */
+}
+
+@keyframes float {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100vh, 0) rotate(0deg);
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(0, -100px, 0) rotate(360deg);
+  }
+}
+
+@keyframes floatAndSpin {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100vh, 0) rotate(0deg) scale(0.5);
+  }
+  10% {
+    opacity: 1;
+    transform: translate3d(0, 90vh, 0) rotate(36deg) scale(1);
+  }
+  90% {
+    opacity: 1;
+    transform: translate3d(0, 10vh, 0) rotate(324deg) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(0, -100px, 0) rotate(360deg) scale(0.5);
+  }
+}

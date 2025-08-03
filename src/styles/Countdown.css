@@ -1,0 +1,84 @@
+.countdown-page {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  flex-direction: column;
+}
+
+.countdown-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 800px;
+}
+
+.countdown-title {
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  margin: 0;
+}
+
+.countdown-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.countdown-item {
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  min-width: 100px;
+  text-align: center;
+}
+
+.countdown-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.countdown-label {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.8);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.birthday-message {
+  font-size: 1.5rem;
+  color: #fff;
+  opacity: 0.9;
+  margin: 0;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .countdown-title {
+    font-size: 2.5rem;
+  }
+  
+  .countdown-container {
+    gap: 15px;
+  }
+  
+  .countdown-item {
+    padding: 15px;
+    min-width: 80px;
+  }
+  
+  .countdown-number {
+    font-size: 2rem;
+  }
+  
+  .birthday-message {
+    font-size: 1.2rem;
+  }
+}
