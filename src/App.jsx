@@ -1,5 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './App.css'
+
+import { logVisit } from './utils/testA';
+
+
 import MainPage from './components/MainPage'
 import Countdown from './components/Countdown'
 import ImageCarousel from './components/ImageCarousel'
@@ -15,6 +19,8 @@ const PAGES = {
 }
 
 function App() {
+
+
   const [currentPage, setCurrentPage] = useState(PAGES.MAIN)
   const [showParticles, setShowParticles] = useState(false)
   const [isCountdownExpired, setIsCountdownExpired] = useState(false)
@@ -41,6 +47,13 @@ function App() {
   const handleCountdownExpired = (expired) => {
     setIsCountdownExpired(expired)
   }
+
+  useEffect(() => {
+    // Log page changes within your app
+    if (currentPage !== PAGES.MAIN) {
+      logVisit();
+    }
+  }, [currentPage]);
 
   return (
     <div className="app">
